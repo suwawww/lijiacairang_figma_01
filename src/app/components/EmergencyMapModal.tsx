@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import mapImage from "figma:asset/b058913ecb41e342c4cb81518c003de8f8363382.png";
+const mapImage = "https://images.unsplash.com/photo-1577083160969-1f6d6e5c6b8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800";
 
 interface Personnel {
   id: number;
