@@ -7,7 +7,7 @@ import { ModeToggle } from "../ModeToggle";
 import { useNavigate } from "react-router";
 import { motion } from "motion/react";
 import { fadeInUp, fadeIn, staggerContainer } from "../../utils/animations";
-import mapImage from "figma:asset/b058913ecb41e342c4cb81518c003de8f8363382.png";
+const mapImage = "https://images.unsplash.com/photo-1577083160969-1f6d6e5c6b8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800";
 import { useState } from "react";
 import { EmergencyMapModal } from "../EmergencyMapModal";
 
