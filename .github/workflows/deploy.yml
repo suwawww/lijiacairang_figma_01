@@ -1,0 +1,27 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]  # 当 main 分支有推送时触发
+
+permissions:
+  contents: write # 允许 Action 推送代码到 gh-pages 分支
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    concurrency: ci-${{ github.ref }} # 防止并发部署冲突
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Install and Build 🔧
+        # 这里是关键：执行 Figma Make 项目所需的安装和构建命令
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # 重点！指定构建后生成的文件夹名称
